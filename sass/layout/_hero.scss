@@ -1,0 +1,89 @@
+.hero{
+  align-items: center;
+  text-align: center;
+  padding: 118px 60px;
+  @media screen and (min-width: 768px) {
+    padding: 118px 204px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px auto;
+  }
+  background-color: var(--box-fon-color);
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-mod.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    max-width: 480px;
+    text-align: center;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-mod2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-tab.jpg);
+    max-width: 768px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-tab2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/Imgfon.jpg);
+    max-width: 1600px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-2x.jpg);
+    }
+  }
+}
+
+.hero__content{
+    margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 30px;
+
+  font-size: 26px;
+  line-height: 1.62;
+  @media screen and (min-width:1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
+
+}
