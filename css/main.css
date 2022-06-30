@@ -67,6 +67,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media screen and (max-width: 767px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -709,6 +714,7 @@ body {
 .navigation__list,
 .navigation__lists {
   display: flex;
+  display: none;
 }
 
 .navigation__item {
@@ -719,11 +725,6 @@ body {
 .navigation__lists .navigation__item:not(:last-child),
 .navigation__list .navigation__item:not(:last-child) {
   margin-right: 50px;
-}
-
-.navigation__lists {
-  margin-left: auto;
-  display: none;
 }
 
 .navigation__link--active {
@@ -775,6 +776,11 @@ body {
   color: var(--accent-color);
 }
 
+.navigation__lists {
+  margin-left: auto;
+  display: none;
+}
+
 .menu-open {
   width: 40px;
   height: 40px;
@@ -784,7 +790,7 @@ body {
   margin-left: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .menu-open {
     display: none;
   }
@@ -803,13 +809,11 @@ body {
 }
 
 .mob-mebu {
-  position: fixed;
+  position: absolute;
   background-color: var(--primary-white-color);
   width: 100vw;
   height: 100vh;
   top: 0;
-  padding-top: 48px;
-  padding-bottom: 48px;
 }
 .mob-mebu .container {
   display: flex;

@@ -5,6 +5,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+   @media screen and (max-width: 767px){
+      body.menu-open{
+        overflow: hidden;
+      }
+  }
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
