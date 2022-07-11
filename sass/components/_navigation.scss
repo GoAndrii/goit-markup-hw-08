@@ -177,6 +177,7 @@ letter-spacing: 0.02em;
 
 
 .menu-close{
+  padding-top: 10px;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -190,8 +191,6 @@ letter-spacing: 0.02em;
 &:focus{
   fill: var(--button-color);
 }
-// margin-left: auto;
-//     z-index: 1000;
 }
 
 .mob-mebu{
@@ -201,12 +200,12 @@ letter-spacing: 0.02em;
   height: 100vh;
   top:0;
   z-index: 999;
-  padding-top: 10px;
-  padding-bottom: 48px;
+  // padding-bottom: 48px;
     overflow-y: scroll;
   .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     height: 100%;
       align-items: flex-start;
@@ -237,6 +236,7 @@ text-decoration: none;
 }
 
 .mob-navigation__list{
+  padding-top: 48px;
   margin-bottom: 302px;
     padding-inline-start: 25px;
 }
@@ -273,6 +273,7 @@ line-height: 1.22;
 letter-spacing: 0.02em;
 color: var(--accent-color);
  padding-inline-start: 15px;
+ padding-bottom: 48px;
 }
 
 .mob-soc{
