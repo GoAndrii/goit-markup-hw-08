@@ -24,6 +24,10 @@ transition-property: visibility, transform, opacity;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 padding: 40px 40px;
+ @media screen and (max-width: 1199px) {
+      width:450px;
+height:609px;
+    }
 }
 
 .modal__btn{
@@ -85,6 +89,9 @@ margin-bottom: 10px;
 &:focus + .fieldset__icon{
   fill: var(--accent-color);
 }
+ @media screen and (max-width: 1199px) {
+      width: 370px;
+    }
 }
 
 
@@ -111,6 +118,9 @@ color: rgba(117, 117, 117, 0.5);
 &:focus{
   border-color: var(--accent-color);
 }
+@media screen and (max-width: 1199px) {
+      width: 370px;
+    }
 }
 
 .modal button{
@@ -142,12 +152,19 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .policy{
+  font-weight: 400;
   font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
    display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1199px) {
+      font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.03em;
+    }
 }
 
 .policy__checkbox {

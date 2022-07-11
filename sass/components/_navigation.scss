@@ -18,21 +18,40 @@
   display: block;
 }
 
+.navigation__list{
+   @media screen and (max-width: 1199px){
+        margin-right: 88px;
+  }
+}
+
 .navigation__list,
 .navigation__lists{
-  display: flex;
   display: none;
+  @media screen and (min-width: 768px){
+        display: flex;
+        margin-left: auto;
+  }
+}
+
+.navigation__info:not(:last-child){
+      @media screen and (max-width: 1199px){
+       margin-bottom: 10px;
+  }
 }
 
 
 .navigation__item {
   display: block;
-  display: none;
 }
 
-.navigation__lists .navigation__item:not(:last-child),
 .navigation__list .navigation__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.navigation__lists .navigation__item:not(:last-child){
+   @media screen and (min-width: 1200px){
+       margin-right: 30px;
+  }
 }
 
 
@@ -74,11 +93,53 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            @media screen and (max-width: 1199px){
+        margin-left: auto;
+        font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.02em;
+  }
+}
+
+.navigation__lists{
+    @media screen and (max-width: 1199px){
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    .navigation__item:first-child {
+    margin-bottom: 10px;
+  }
+  margin-left: auto;
+   align-items: flex-start;
+}
+  }
+
+.navigation__info{
+          @media screen and (max-width: 1199px){
+        margin-left: auto;
+  }
 }
 
 .navigation__icon {
   fill: currentColor;
   margin-right: 10px;
+   @media screen and (max-width: 1199px){
+        margin-right: 8px;
+  }
+}
+
+.navigation__icon--mail{
+  @media screen and (max-width: 1199px){
+         width: 12px;
+  height: 10px;
+  }
+
+}
+
+.navigation__icon--phone{
+   @media screen and (max-width: 1199px){
+  height: 14px;
+  }
 }
 
 .navigation__info:hover,
@@ -89,7 +150,9 @@
 .navigation__lists {
   margin-left: auto;
   display: none;
-
+        @media screen and (min-width: 768px){
+        display:flex;
+  }
 }
 
 
@@ -100,10 +163,18 @@
   border: transparent;
   display: block;
   margin-left: auto;
+    transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+&:focus{
+  fill: var(--button-color);
+}
         @media screen and (min-width: 768px){
         display: none;
   }
 }
+
 
 .menu-close{
   width: 40px;
@@ -112,11 +183,15 @@
   border: transparent;
   display: block;
   margin-left: auto;
-  
+    transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
 &:focus{
   fill: var(--button-color);
 }
+// margin-left: auto;
+//     z-index: 1000;
 }
 
 .mob-mebu{
@@ -125,13 +200,16 @@
   width: 100vw;
   height: 100vh;
   top:0;
-  // padding-top: 48px;
-  // padding-bottom: 48px;
+  z-index: 999;
+  padding-top: 10px;
+  padding-bottom: 48px;
+    overflow-y: scroll;
   .container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+      align-items: flex-start;
   }
         @media screen and (min-width: 768px){
         display: none;
@@ -145,6 +223,9 @@ line-height: 1.17;
 letter-spacing: 0.02em;
 color:var(--title-text-color);
 text-decoration: none;
+    transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
 &:focus{
   color: var(--accent-color);
@@ -152,11 +233,16 @@ text-decoration: none;
 }
 
 .mob-navigation__item:not(:last-child){
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .mob-navigation__list{
   margin-bottom: 302px;
+    padding-inline-start: 25px;
+}
+
+.mob-connect{
+    padding-inline-start: 25px;
 }
 
 .mob-connect__info{
@@ -186,25 +272,17 @@ font-size: 18px;
 line-height: 1.22;
 letter-spacing: 0.02em;
 color: var(--accent-color);
+ padding-inline-start: 15px;
 }
 
 .mob-soc{
   position: relative;
 }
 
-.mob-soc__bord::before{
-  content: "";
-  position: absolute;
-  background-color: rgba(33, 33, 33, 0.2);
-  transform: rotate(90deg);
-  text-align: center;
-width: 22px;
-height: 1px;
+.mob-soc__item:not(:last-child){
+      border-right: 1px solid rgba(33,33,33,0.2);
 }
 
-.mob-soc__item:not(:last-child){
-  margin-right: 20px;
-}
 
 .mob-connect__infor{
   font-weight: 500;
@@ -222,4 +300,7 @@ line-height: 1.22;
 letter-spacing: 0.02em;
 color: var(--accent-color);
 text-decoration: none;
+padding-right: 10px;
+padding-left: 10px;
 }
+
